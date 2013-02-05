@@ -46,6 +46,7 @@
     <Compile Include="Views\BindableGroupListAdaptor.cs" />
     <Compile Include="Views\BindableGroupListView.cs" />
     <Compile Include="AndroidBindingResource.cs" />
+    <Compile Include="BaseAndroidBindingSetup.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ResourcesToCopy\BindingAttributes.xml" />
