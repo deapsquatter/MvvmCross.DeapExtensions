@@ -26,17 +26,22 @@ namespace DeapExtensions.Binding.Droid.Views
 			adapter.GroupTemplateId = groupTemplateId;
 		}
 
+		public ICommand GroupClick { get; set; }
+
 		protected override void ExecuteCommandOnItem(ICommand command, int position)
 		{
-			if (command == null)
-				return;
-			
 			var item = Adapter.GetRawItem(position);
 			if (item == null)
 				return;
-
 			var flatItem = (BindableGroupListAdaptor.FlatItem)item;
-			if (flatItem.IsGroup || !command.CanExecute(flatItem.Item))
+
+			if (flatItem.IsGroup)
+				command = GroupClick;
+
+			if (command == null)
+				return;
+
+			if (!command.CanExecute(flatItem.Item))
 				return;
 			
 			command.Execute(flatItem.Item);
