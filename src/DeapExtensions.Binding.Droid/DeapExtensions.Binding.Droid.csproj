@@ -43,10 +43,10 @@
     <Reference Include="Mono.Android" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Views\BindableGroupListAdaptor.cs" />
     <Compile Include="Views\BindableGroupListView.cs" />
     <Compile Include="AndroidBindingResource.cs" />
     <Compile Include="BaseAndroidBindingSetup.cs" />
+    <Compile Include="Views\BindableGroupListAdapter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ResourcesToCopy\BindingAttributes.xml" />

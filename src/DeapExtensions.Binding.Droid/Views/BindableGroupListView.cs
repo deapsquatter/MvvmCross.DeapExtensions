@@ -11,11 +11,11 @@ namespace DeapExtensions.Binding.Droid.Views
 	public class BindableGroupListView : MvxBindableListView
 	{
 		public BindableGroupListView(Context context, IAttributeSet attrs)
-			: this(context, attrs, new BindableGroupListAdaptor(context))
+			: this(context, attrs, new BindableGroupListAdapter(context))
 		{
 		}
 		
-		public BindableGroupListView(Context context, IAttributeSet attrs, BindableGroupListAdaptor adapter)
+		public BindableGroupListView(Context context, IAttributeSet attrs, BindableGroupListAdapter adapter)
 			: base(context, attrs, adapter)
 		{
 			var groupTemplateId = MvxBindableListViewHelpers.ReadAttributeValue(context, attrs,
@@ -33,7 +33,7 @@ namespace DeapExtensions.Binding.Droid.Views
 			var item = Adapter.GetRawItem(position);
 			if (item == null)
 				return;
-			var flatItem = (BindableGroupListAdaptor.FlatItem)item;
+			var flatItem = (BindableGroupListAdapter.FlatItem)item;
 
 			if (flatItem.IsGroup)
 				command = GroupClick;

@@ -8,12 +8,12 @@ using System.Collections.Specialized;
 
 namespace DeapExtensions.Binding.Droid.Views
 {
-	public class BindableGroupListAdaptor : MvxBindableListAdapter
+	public class BindableGroupListAdapter : MvxBindableListAdapter
 	{
 		int groupTemplateId;
 		private IEnumerable _itemsSource;
 
-		public BindableGroupListAdaptor(Context context): base(context)
+		public BindableGroupListAdapter(Context context): base(context)
 		{
 		}
 
