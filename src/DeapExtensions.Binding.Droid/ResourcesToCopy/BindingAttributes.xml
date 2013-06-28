@@ -3,7 +3,7 @@
   <declare-styleable name="MvxBinding">
     <attr name="MvxBind" format="string"/>
   </declare-styleable>
-  <declare-styleable name="MvxBindableListView">
+  <declare-styleable name="MvxListView">
     <attr name="MvxItemTemplate" format="string"/>
     <attr name="MvxDropDownItemTemplate" format="string"/>
     <attr name="GroupItemTemplate" format="string"/>     

@@ -9,11 +9,15 @@ using System;
 using System.Collections.Generic;
 using Cirrious.MvvmCross.Binding.Droid;
 using Android.Content;
+using Cirrious.MvvmCross.Droid.Platform;
+using System.Reflection;
+using Cirrious.CrossCore.IoC;
+using Android.Views;
 
 namespace DeapExtensions.Binding.Droid
 {
     public abstract class BaseAndroidBindingSetup
-        : MvxBaseAndroidBindingSetup
+        : MvxAndroidSetup
     {
 
 		protected BaseAndroidBindingSetup(Context applicationContext)
@@ -29,6 +33,12 @@ namespace DeapExtensions.Binding.Droid
 				abbreviations["DeapExt"] = "DeapExtensions.Binding.Droid.Views";
 				return abbreviations;
 			}
+		}
+
+		protected override void FillViewTypes(IMvxTypeCache<View> cache)
+		{
+			base.FillViewTypes (cache);
+			cache.AddAssembly (typeof(DeapExtensions.Binding.Droid.Views.BindableGroupListView).Assembly);
 		}
     }
 }

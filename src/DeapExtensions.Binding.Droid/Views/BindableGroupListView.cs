@@ -1,14 +1,13 @@
 using System;
 using Android.Content;
 using Android.Util;
-using System.Collections.Generic;
 using System.Windows.Input;
 using Cirrious.MvvmCross.Binding.Droid.Views;
-using Cirrious.MvvmCross.Binding.Droid;
+using Cirrious.MvvmCross.Binding.Droid.ResourceHelpers;
 
 namespace DeapExtensions.Binding.Droid.Views
 {
-	public class BindableGroupListView : MvxBindableListView
+	public class BindableGroupListView : MvxListView
 	{
 		public BindableGroupListView(Context context, IAttributeSet attrs)
 			: this(context, attrs, new BindableGroupListAdapter(context))
@@ -18,9 +17,9 @@ namespace DeapExtensions.Binding.Droid.Views
 		public BindableGroupListView(Context context, IAttributeSet attrs, BindableGroupListAdapter adapter)
 			: base(context, attrs, adapter)
 		{
-			var groupTemplateId = MvxBindableListViewHelpers.ReadAttributeValue(context, attrs,
+			var groupTemplateId = MvxAttributeHelpers.ReadAttributeValue(context, attrs,
 			                                                                   MvxAndroidBindingResource.Instance
-			                                                                   .BindableListViewStylableGroupId,
+			                                                             		.ListViewStylableGroupId,
 			                                                                   AndroidBindingResource.Instance
 			                                                                   .BindableListGroupItemTemplateId);
 			adapter.GroupTemplateId = groupTemplateId;

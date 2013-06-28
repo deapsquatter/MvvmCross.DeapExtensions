@@ -1,18 +1,17 @@
 using System;
-using Cirrious.MvvmCross.Interfaces.ServiceProvider;
-using Cirrious.MvvmCross.ExtensionMethods;
-using Cirrious.MvvmCross.Droid.Interfaces;
+using Cirrious.CrossCore;
+using Cirrious.CrossCore.Droid;
+
 
 namespace DeapExtensions.Binding.Droid
 {
 	public class AndroidBindingResource
-		: IMvxServiceConsumer
 	{
 		public static readonly AndroidBindingResource Instance = new AndroidBindingResource();
 		
 		private AndroidBindingResource()
 		{
-			var setup = this.GetService<IMvxAndroidGlobals>();
+			var setup = Mvx.Resolve<IMvxAndroidGlobals>();
 			var resourceTypeName = setup.ExecutableNamespace + ".Resource";
 			Type resourceType = setup.ExecutableAssembly.GetType(resourceTypeName);
 			if (resourceType == null)
@@ -22,7 +21,7 @@ namespace DeapExtensions.Binding.Droid
 				BindableListGroupItemTemplateId =
 					(int)
 						resourceType.GetNestedType("Styleable")
-						.GetField("MvxBindableListView_GroupItemTemplate")
+						.GetField("MvxListView_GroupItemTemplate")
 						.GetValue(null);
 			}
 			catch (Exception)

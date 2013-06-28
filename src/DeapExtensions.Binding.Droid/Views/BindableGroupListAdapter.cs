@@ -1,14 +1,14 @@
 using System;
-using Cirrious.MvvmCross.Binding.Droid.Views;
+using System.Collections;
+using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.Linq;
 using Android.Content;
-using System.Collections.Generic;
-using System.Collections;
-using System.Collections.Specialized;
+using Cirrious.MvvmCross.Binding.Droid.Views;
 
 namespace DeapExtensions.Binding.Droid.Views
 {
-	public class BindableGroupListAdapter : MvxBindableListAdapter
+	public class BindableGroupListAdapter : MvxAdapter
 	{
 		int groupTemplateId;
 		private IEnumerable _itemsSource;

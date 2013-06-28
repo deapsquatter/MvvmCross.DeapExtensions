@@ -33,7 +33,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>False</ConsolePause>
-    <AndroidLinkMode>SdkOnly</AndroidLinkMode>
     <AndroidUseSharedRuntime>False</AndroidUseSharedRuntime>
   </PropertyGroup>
   <ItemGroup>
@@ -61,13 +60,21 @@
       <Project>{47FD89C3-19DC-4BD2-9B6D-FB8363BE7EB9}</Project>
       <Name>Cirrious.MvvmCross.Binding.Droid</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\mvvmcross\Cirrious\Cirrious.MvvmCross\Cirrious.MvvmCross.Droid.Pcl.csproj">
-      <Project>{C7E27475-E7D0-448C-A5CC-5097DCA1E2DD}</Project>
-      <Name>Cirrious.MvvmCross.Droid.Pcl</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\..\mvvmcross\Cirrious\Cirrious.MvvmCross.Droid\Cirrious.MvvmCross.Droid.csproj">
       <Project>{7A6BE137-D0F1-46A1-AE5C-81FAEEDDDF02}</Project>
       <Name>Cirrious.MvvmCross.Droid</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\mvvmcross\Cirrious\Cirrious.MvvmCross\Cirrious.MvvmCross.Droid.Pcl.csproj">
+      <Project>{B6E56475-E6D0-468C-A7CC-5097DCA1E2DD}</Project>
+      <Name>Cirrious.MvvmCross.Droid.Pcl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\mvvmcross\CrossCore\Cirrious.CrossCore\Cirrious.CrossCore.Droid.Pcl.csproj">
+      <Project>{CFF6F11A-3C3B-23EE-A24C-2ED4AAFF3ADB}</Project>
+      <Name>Cirrious.CrossCore.Droid.Pcl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\mvvmcross\CrossCore\Cirrious.CrossCore.Droid\Cirrious.CrossCore.Droid.csproj">
+      <Project>{CAF8935F-56FE-4485-9D34-4A38FE79F6C9}</Project>
+      <Name>Cirrious.CrossCore.Droid</Name>
     </ProjectReference>
   </ItemGroup>
 </Project>
